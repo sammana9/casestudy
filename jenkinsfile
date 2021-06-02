@@ -5,7 +5,7 @@ pipeline {
         stage('codereview') {
 		  when
 		  {
-                   branch 'master'
+                   branch "master"
 		   }
 
             steps {
