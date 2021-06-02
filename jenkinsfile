@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('codereview') {
 		  when {
-  allOf {
+  anyOf {
     branch 'master'
     changeRequest url: 'https://github.com/sammana9/casestudy'
   }
