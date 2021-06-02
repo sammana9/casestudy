@@ -13,7 +13,7 @@ pipeline {
 
             steps {
                 echo 'code review successfully done'
-		echo "${env.BRANCH_NAME}"
+		//echo "${env.BRANCH_NAME}"
             }
         }
          stage('unittest') {
