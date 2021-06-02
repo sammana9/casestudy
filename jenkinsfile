@@ -5,7 +5,7 @@ pipeline {
         stage('codereview') {
 		  when {
                     expression{
-		    env.GIT_BRANCH == 'origin/master'
+		    env.BRANCH_NAME == 'origin/master'
 		    }
 }
 
