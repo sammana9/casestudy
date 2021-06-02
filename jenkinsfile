@@ -5,13 +5,13 @@ pipeline {
         stage('codereview') {
 		  when {
                     expression{
-		    env.BRANCH_NAME == 'origin/master'
+		    env.GIT_BRANCH == 'origin/master'
 		    }
 }
 
             steps {
                 echo 'code review successfully done'
-		//echo "${env.GIT_BRANCH}"
+		echo "${env.BRANCH_NAME}"
             }
         }
          stage('unittest') {
