@@ -1,4 +1,4 @@
-def CODE_CHANGES
+ CODE_CHANGES
 pipeline {
     agent any
 
