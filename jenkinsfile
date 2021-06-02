@@ -4,12 +4,11 @@ pipeline {
 
     stages {
         stage('codereview') {
-		  when {
-  anyOf {
-    branch 'master'
-    changeRequest url: 'https://github.com/sammana9/casestudy'
-  }
-}
+		  when
+		  {
+                   branch 'master'
+		   }
+
             steps {
                 echo 'code review successfully done'
             }
