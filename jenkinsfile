@@ -3,13 +3,11 @@ pipeline {
 
     stages {
         stage('codereview') {
-		  when
-		  {
-                   branch "master"
-		   }
+		
 
             steps {
                 echo 'code review successfully done'
+		echo '${env.BRANCH_NAME}'
             }
         }
          stage('unittest') {
