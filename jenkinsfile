@@ -1,8 +1,16 @@
+def CODE_CHANGES
 pipeline {
     agent any
 
     stages {
         stage('codereview') {
+		when {
+		 expression
+		 {
+		  BRANCH_NAME=='master' && CODE_CHANGES==true
+		 }
+		 
+		}
             steps {
                 echo 'code review successfully done'
             }
