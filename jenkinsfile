@@ -1,3 +1,5 @@
+
+def EXECUTE_STATUS
 pipeline {
     agent any
 
@@ -5,7 +7,7 @@ pipeline {
         stage('codereview') {
 		  when {
                     expression{
-		    env.GIT_BRANCH == 'origin/master'
+		    env.GIT_BRANCH == 'origin/master' && EXECUTE_STATUS==true
 		    }
 }
 
