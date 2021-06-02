@@ -1,4 +1,3 @@
-def CODE_CHANGES
 pipeline {
     agent any
 
